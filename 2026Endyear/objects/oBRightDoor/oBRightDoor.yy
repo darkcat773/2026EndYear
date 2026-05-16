@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sBFrontDoorClosed",
-    "path":"sprites/sBFrontDoorClosed/sBFrontDoorClosed.yy",
+    "name":"sBRightDoorClosed",
+    "path":"sprites/sBRightDoorClosed/sBRightDoorClosed.yy",
   },
   "spriteMaskId":null,
   "visible":true,
