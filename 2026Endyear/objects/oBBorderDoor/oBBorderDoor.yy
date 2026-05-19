@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oBRightDoor",
+  "%Name":"oBBorderDoor",
   "eventList":[],
   "managed":true,
-  "name":"oBRightDoor",
+  "name":"oBBorderDoor",
   "overriddenProperties":[],
   "parent":{
     "name":"basement",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sBRightDoorClosed",
-    "path":"sprites/sBRightDoorClosed/sBRightDoorClosed.yy",
+    "name":"sBBorderDoorOpen",
+    "path":"sprites/sBBorderDoorOpen/sBBorderDoorOpen.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oBRightDoor",
+  "%Name":"oBFloorHint",
   "eventList":[],
   "managed":true,
-  "name":"oBRightDoor",
+  "name":"oBFloorHint",
   "overriddenProperties":[],
   "parent":{
     "name":"basement",
     "path":"folders/objects/tiles/basement.yy",
   },
-  "parentObjectId":{
-    "name":"oWall",
-    "path":"objects/oWall/oWall.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sBRightDoorClosed",
-    "path":"sprites/sBRightDoorClosed/sBRightDoorClosed.yy",
+    "name":"sBFloorHint",
+    "path":"sprites/sBFloorHint/sBFloorHint.yy",
   },
   "spriteMaskId":null,
   "visible":true,
