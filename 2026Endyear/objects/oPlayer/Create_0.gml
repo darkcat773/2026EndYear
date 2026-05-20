@@ -5,14 +5,7 @@ movSpeed = 1.15;
 xSpeed = 0;
 ySpeed = 0;
 
-//conditionals - directly affects gameplay
+//conditionals - irectly affects gameplay
 canMove = true;
-
-//sprites
-sprite[RIGHT] = sPlayerRight;
-sprite[UP] = sPlayerUp;
-sprite[LEFT] = sPlayerLeft;
-sprite[DOWN] = sPlayerDown;
-face = UP;
 
 //others
