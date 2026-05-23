@@ -1,9 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"oKingDesk",
-  "eventList":[],
+  "%Name":"oHChair",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oKingDesk",
+  "name":"oHChair",
   "overriddenProperties":[],
   "parent":{
     "name":"decoration",
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sKingDesk",
-    "path":"sprites/sKingDesk/sKingDesk.yy",
+    "name":"sHChair",
+    "path":"sprites/sHChair/sHChair.yy",
   },
   "spriteMaskId":null,
   "visible":true,

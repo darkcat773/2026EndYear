@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oKingDesk",
+  "%Name":"oVTable",
   "eventList":[],
   "managed":true,
-  "name":"oKingDesk",
+  "name":"oVTable",
   "overriddenProperties":[],
   "parent":{
     "name":"decoration",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sKingDesk",
-    "path":"sprites/sKingDesk/sKingDesk.yy",
+    "name":"sVTable",
+    "path":"sprites/sVTable/sVTable.yy",
   },
   "spriteMaskId":null,
   "visible":true,
