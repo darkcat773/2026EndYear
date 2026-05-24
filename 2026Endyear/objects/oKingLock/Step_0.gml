@@ -1,3 +1,3 @@
 if(isLocked == false){
-	instance_destroy()
+	instance_destroy();
 }
