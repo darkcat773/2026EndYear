@@ -1,7 +1,8 @@
 if (!isPressed){
 	isPressed = true;
-	
-	if(instace_exists(oKingLock)){
+	image_index = 1;
+	image_speed =0;
+	if(instance_exists(oKingLock)){
 		oKingLock.isLocked = false;
 	}
 }
