@@ -1,20 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oKingDesk",
+  "%Name":"oCamera",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oKingDesk",
+  "name":"oCamera",
   "overriddenProperties":[],
   "parent":{
-    "name":"decoration",
-    "path":"folders/objects/tiles/decoration.yy",
+    "name":"objects",
+    "path":"folders/objects.yy",
   },
-  "parentObjectId":{
-    "name":"oWall",
-    "path":"objects/oWall/oWall.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sKingDesk",
-    "path":"sprites/sKingDesk/sKingDesk.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

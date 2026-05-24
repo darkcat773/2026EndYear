@@ -39,3 +39,8 @@ if xSpeed==0 {
 if ySpeed>0 && face==UP {face=DOWN}
 if ySpeed<0 && face==DOWN {face=UP}
 sprite_index = sprite[face];
+
+//animate
+if xSpeed==0 and ySpeed==0 {
+	image_index=1;
+}
