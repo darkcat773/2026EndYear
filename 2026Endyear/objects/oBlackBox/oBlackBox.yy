@@ -8,8 +8,8 @@
   "name":"oBlackBox",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"function",
+    "path":"folders/objects/function.yy",
   },
   "parentObjectId":null,
   "persistent":false,
