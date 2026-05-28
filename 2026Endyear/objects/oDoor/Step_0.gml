@@ -1,4 +1,4 @@
-if place_meeting(x, y, oPlayer) && !instance_exists(oWarp) {
+if place_meeting(x, y, oPlayer) && !instance_exists(oWarp) && !locked {
 	var instance = instance_create_depth(0, 0, -12000, oWarp)
 	instance.targetX = targetX
 	instance.targetY = targetY

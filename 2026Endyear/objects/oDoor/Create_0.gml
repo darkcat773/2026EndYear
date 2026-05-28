@@ -2,4 +2,4 @@ targetX = 0
 targetY = 0
 target_room = 0;
 target_face = 0;
-image_alpha=0;
+locked = false;

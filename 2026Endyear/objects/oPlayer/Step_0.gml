@@ -11,6 +11,11 @@ xKey = keyboard_check(ord("x"));
 xSpeed = movSpeed*(rightKey-leftKey);
 ySpeed = movSpeed*(downKey-upKey);
 
+if instance_exists(oPause) {
+	xSpeed=0
+	ySpeed=0
+}
+
 
 // collision
 if place_meeting(x+xSpeed, y, oWall) {
@@ -18,6 +23,19 @@ if place_meeting(x+xSpeed, y, oWall) {
 }
 if place_meeting(x, y+ySpeed, oWall) {
 	ySpeed=0;
+}
+
+var nearDoor = instance_nearest(x, y, oDoor)
+
+if instance_exists(oDoor){
+	if nearDoor.locked {
+	if place_meeting(x+xSpeed, y, nearDoor) {
+	xSpeed=0;
+	}
+	if place_meeting(x, y+ySpeed, nearDoor) {
+		ySpeed=0;
+	}
+	}
 }
 
 
