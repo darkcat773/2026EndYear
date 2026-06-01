@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"oBFrontDoor",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"oBFrontDoor",
   "overriddenProperties":[],
@@ -12,8 +10,8 @@
     "path":"folders/objects/tiles/basement.yy",
   },
   "parentObjectId":{
-    "name":"oDoor",
-    "path":"objects/oDoor/oDoor.yy",
+    "name":"oWall",
+    "path":"objects/oWall/oWall.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
