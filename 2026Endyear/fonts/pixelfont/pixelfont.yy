@@ -120,7 +120,7 @@
   "name":"pixelfont",
   "parent":{
     "name":"text",
-    "path":"folders/text.yy",
+    "path":"folders/sprites/text.yy",
   },
   "pointRounding":0,
   "ranges":[
