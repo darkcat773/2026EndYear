@@ -76,6 +76,7 @@
     {"id":{"name":"oWarp","path":"objects/oWarp/oWarp.yy",},},
     {"id":{"name":"BBathroom","path":"rooms/BBathroom/BBathroom.yy",},},
     {"id":{"name":"BHallway","path":"rooms/BHallway/BHallway.yy",},},
+    {"id":{"name":"BHessami","path":"rooms/BHessami/BHessami.yy",},},
     {"id":{"name":"BKing","path":"rooms/BKing/BKing.yy",},},
     {"id":{"name":"scrMacros","path":"scripts/scrMacros/scrMacros.yy",},},
     {"id":{"name":"sBBorder","path":"sprites/sBBorder/sBBorder.yy",},},
@@ -126,6 +127,7 @@
     {"roomId":{"name":"BHallway","path":"rooms/BHallway/BHallway.yy",},},
     {"roomId":{"name":"BKing","path":"rooms/BKing/BKing.yy",},},
     {"roomId":{"name":"BBathroom","path":"rooms/BBathroom/BBathroom.yy",},},
+    {"roomId":{"name":"BHessami","path":"rooms/BHessami/BHessami.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
