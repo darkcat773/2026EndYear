@@ -78,6 +78,7 @@
     {"id":{"name":"BHallway","path":"rooms/BHallway/BHallway.yy",},},
     {"id":{"name":"BHessami","path":"rooms/BHessami/BHessami.yy",},},
     {"id":{"name":"BKing","path":"rooms/BKing/BKing.yy",},},
+    {"id":{"name":"BRusso","path":"rooms/BRusso/BRusso.yy",},},
     {"id":{"name":"scrMacros","path":"scripts/scrMacros/scrMacros.yy",},},
     {"id":{"name":"sBBorder","path":"sprites/sBBorder/sBBorder.yy",},},
     {"id":{"name":"sBBorderDoorClosed","path":"sprites/sBBorderDoorClosed/sBBorderDoorClosed.yy",},},
@@ -125,9 +126,10 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"BHallway","path":"rooms/BHallway/BHallway.yy",},},
-    {"roomId":{"name":"BKing","path":"rooms/BKing/BKing.yy",},},
+    {"roomId":{"name":"BRusso","path":"rooms/BRusso/BRusso.yy",},},
     {"roomId":{"name":"BBathroom","path":"rooms/BBathroom/BBathroom.yy",},},
     {"roomId":{"name":"BHessami","path":"rooms/BHessami/BHessami.yy",},},
+    {"roomId":{"name":"BKing","path":"rooms/BKing/BKing.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

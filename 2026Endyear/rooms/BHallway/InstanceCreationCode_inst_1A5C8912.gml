@@ -1,5 +1,5 @@
-targetX = 0
-targetY = 0
-target_room = 0;
-target_face = 0;
-locked = true;
+targetX = 448
+targetY = 344
+target_room = BRusso;
+target_face = UP;
+locked = false;
