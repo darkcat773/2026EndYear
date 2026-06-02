@@ -1,5 +1,5 @@
-targetX = 460
-targetY = 616
+targetX = 464
+targetY = 632
 target_room = BKing;
 target_face = UP;
 locked = false;
