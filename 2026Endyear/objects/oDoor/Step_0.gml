@@ -5,3 +5,5 @@ if place_meeting(x, y, oPlayer) && !instance_exists(oWarp) && !locked {
 	instance.target_room = target_room
 	instance.target_face = target_face
 }
+
+locked = conditional;
