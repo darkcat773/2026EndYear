@@ -1,0 +1,3 @@
+isShowing = false;
+
+finished = false;
