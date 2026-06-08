@@ -9,3 +9,6 @@ if(not isShowing){
         pause_id = noone; 
     }
 }
+
+
+
