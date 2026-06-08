@@ -23,7 +23,7 @@
   ],
   "name":"sBookOrange",
   "nineSlice":null,
-  "origin":6,
+  "origin":0,
   "parent":{
     "name":"BPuzzles",
     "path":"folders/sprites/tiles/basement/BPuzzles.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":64,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

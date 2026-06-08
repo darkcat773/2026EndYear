@@ -15,8 +15,11 @@ sprite[LEFT] = sPlayerLeft;
 sprite[DOWN] = sPlayerDown;
 face = UP;
 
-//others
 
 //HP
 hp = 5;
 max_hp=5;
+
+//inventory
+inv = [];
+equipZ = noone;
