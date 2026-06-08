@@ -9,8 +9,8 @@
   "name":"globalvars",
   "overriddenProperties":[],
   "parent":{
-    "name":"function",
-    "path":"folders/objects/function.yy",
+    "name":"basement",
+    "path":"folders/objects/function/basement.yy",
   },
   "parentObjectId":null,
   "persistent":true,
