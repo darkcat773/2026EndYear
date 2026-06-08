@@ -1,0 +1,1 @@
+isNear = false;

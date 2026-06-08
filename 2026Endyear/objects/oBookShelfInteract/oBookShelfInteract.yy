@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"oBookshelf",
+  "%Name":"oBookShelfInteract",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oBookshelf",
+  "name":"oBookShelfInteract",
   "overriddenProperties":[],
   "parent":{
-    "name":"interact_items",
-    "path":"folders/objects/interact_items.yy",
+    "name":"basement",
+    "path":"folders/objects/function/basement.yy",
   },
-  "parentObjectId":{
-    "name":"oWall",
-    "path":"objects/oWall/oWall.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sBookshelf",
-    "path":"sprites/sBookshelf/sBookshelf.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
