@@ -146,6 +146,7 @@
     {"id":{"name":"sPlayerLeft","path":"sprites/sPlayerLeft/sPlayerLeft.yy",},},
     {"id":{"name":"sPlayerRight","path":"sprites/sPlayerRight/sPlayerRight.yy",},},
     {"id":{"name":"sPlayerUp","path":"sprites/sPlayerUp/sPlayerUp.yy",},},
+    {"id":{"name":"sPointer","path":"sprites/sPointer/sPointer.yy",},},
     {"id":{"name":"sPostItNote","path":"sprites/sPostItNote/sPostItNote.yy",},},
     {"id":{"name":"sRoomTransition","path":"sprites/sRoomTransition/sRoomTransition.yy",},},
     {"id":{"name":"sRussoButton","path":"sprites/sRussoButton/sRussoButton.yy",},},

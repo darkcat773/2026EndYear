@@ -6,6 +6,7 @@ if(isNear){
 	if(isShowing == true){
 		//main
 		bookSortOpen();
+		pointerMovement();
 		
 	}
 }
@@ -35,7 +36,25 @@ bookSortOpen = function(){
 	
 	for(var i=0; i<array_length(sBooks); i++){
 		draw_sprite_ext(sBooks[i], 0,current_x,base_y,scale,scale,0,c_white,1.0);
+		book_positions[i] = current_x;
 		var bookwidth = ceil(sprite_get_width(sBookBlue)*scale);
 		current_x += bookwidth + constant;
 	}	
+	bookCount = 6;
+	if (keyboard_check_pressed(vk_right)) {
+		book_index++;
+		if (book_index >= bookCount) book_index = 0; // goes to start
+	}
+	if (keyboard_check_pressed(vk_left)) {
+		book_index--;
+		if (book_index < 0) book_index = bookCount - 1; //goes to end
+	}
+	
+	draw_sprite_ext(sPointer,0,book_positions[book_index], 363,1,1,0,c_white,1.0);
+
+	
+}
+
+pointerMovement = function(){
+
 }
