@@ -1,1 +1,2 @@
 isNear = false;
+isShowing = false;

@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"sBookShelfZoomed",
   "bboxMode":0,
-  "bbox_bottom":79,
+  "bbox_bottom":99,
   "bbox_left":0,
   "bbox_right":127,
   "bbox_top":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":80,
+  "height":100,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"7f828514-b274-46cd-8c61-c187fe495f3d","blendMode":0,"displayName":"default","isLocked":false,"name":"7f828514-b274-46cd-8c61-c187fe495f3d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},

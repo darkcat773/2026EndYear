@@ -1,3 +1,7 @@
-if place_meeting(x, y, oPlayer){
-	oBookHUD.isShowing = true;
+if (distance_to_object(oPlayer) < 32) {
+	oBookHUD.isNear = true;
+}
+
+if (distance_to_object(oPlayer) > 32) {
+	oBookHUD.isNear = false;
 }
