@@ -15,24 +15,24 @@ if (!isDialogue) {
 	
 
 	if (isInventory) {
-		// We expand the height (abox_h) slightly to accommodate both slots nicely
+		// adjusted abox
     var abox_x = gui_width - 160 * 3;
     var abox_y = 26 * 3;
     var abox_w = 70 * 3;
     var abox_h = 30 * 3; 
     draw_rectangle(abox_x, abox_y, abox_x + abox_w, abox_y + abox_h, true);
     
-    // Header
+    // header
 
     draw_text_transformed(abox_x + 15, abox_y -20, "INV.", 2, 2, 0);
     
-    // Draw both slots
+    // both slots
     for (var i = 0; i < 2; i++) {
         var item_name = (oPlayer.inv[i] == noone) ? "Empty" : oPlayer.inv[i];
         var text_y_pos = abox_y + 32 + (i * 32);
         
         if (invSelect == i) {
-            // Draw visual cursor indicator next to selected choice
+            // indicator
 			if ((current_time div 400) % 2 == 0) {
 			draw_text_transformed(abox_x + 15, text_y_pos, "> " + item_name, 1.5, 1.5, 0);
 		}
@@ -109,10 +109,4 @@ if(instance_exists(oBookHUD) and instance_exists(oBookShelfInteract)){
 	if(oBookHUD.isNear or oBookShelfInteract.isNear){
 	drawInteract();
 }
-}
-
-if(instance_exists(oBookShelfInteract)){
-	if(oBookShelfInteract.isShowing){
-		draw_text_transformed(500, 120, "[Z]", 3, 3, 0);
-	}
 }
