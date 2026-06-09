@@ -92,3 +92,9 @@ if(instance_exists(oBookHUD) and instance_exists(oBookShelfInteract)){
 	drawInteract();
 }
 }
+
+if(instance_exists(oBookShelfInteract)){
+	if(oBookShelfInteract.isShowing){
+		draw_text_transformed(500, 120, "[Z]", 3, 3, 0);
+	}
+}
