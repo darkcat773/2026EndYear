@@ -8,6 +8,8 @@ if(not isShowing){
         instance_destroy(pause_id);
         pause_id = noone; 
     }
+	currentLevel= 1;
+	correct =0;
 }
 
 

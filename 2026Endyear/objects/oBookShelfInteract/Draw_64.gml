@@ -1,11 +1,12 @@
 if(isNear){
 	if (keyboard_check_pressed(vk_enter)){
 		isShowing = !isShowing;
+		selectedBooks = [];
 	}
 	if(isShowing == true){
 		//main
 		bookSortOpen();
-		pointerMovement();
+		drawZoom();
 		
 	}
 }
@@ -21,7 +22,7 @@ bookSortOpen = function(){
 	var constant = 20;
 	var scale = 1.8;
 	
-	var sBooks = [sBookOrange, sBookRed, sBookBeige, sBookBlue, sBookGreen,sBookHalfBeige];
+	
 	var current_x = base_x;
 	
 	for(var i=0; i<array_length(sBooks); i++){
@@ -45,6 +46,11 @@ bookSortOpen = function(){
 	
 }
 
-pointerMovement = function(){
 
+drawZoom = function(){
+	base_x= 100;
+	constant = 100;
+	for(var i =0; i<array_length(selectedBooks); i++){
+		draw_sprite_ext(selectedBooks[i],0,(base_x+constant*i),665,3,3,0,c_white,1.0);
+	}
 }

@@ -4,3 +4,6 @@ book_positions = [];
 book_index = 0;
 submitted = false;
 pause_id = noone;
+sBooks = [sBookOrange, sBookRed, sBookBeige, sBookBlue, sBookGreen,sBookHalfBeige];
+selectedBooks = [];
+answerKey = [sBookRed, sBookBlue,sBookBeige,sBookHalfBeige,sBookGreen,sBookOrange];

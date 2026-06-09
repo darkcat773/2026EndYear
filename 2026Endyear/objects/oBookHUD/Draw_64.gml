@@ -234,5 +234,4 @@ conclusion = function(){
 		finished = true;
 	}
 	
-	
 }
