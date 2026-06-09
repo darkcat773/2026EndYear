@@ -1,4 +1,5 @@
-if (item_type == "Z") {
+if place_meeting(x, y, oPlayer) {
+	if (item_type == "Z") {
     // Only pick up if the Z-slot is completely empty
     if (oPlayer.equipZ == noone) {
         oPlayer.equipZ = { name: item_name, type: item_type };
@@ -10,4 +11,5 @@ if (item_type == "Z") {
         array_push(oPlayer.inv, { name: item_name, type: item_type });
         instance_destroy();
     }
+}
 }

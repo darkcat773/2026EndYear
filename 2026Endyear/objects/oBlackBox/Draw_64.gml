@@ -7,15 +7,13 @@ draw_set_color(c_white);
 
 if (!isDialogue) {
 	if (isInventory) {
-		// ==========================================
-		// INVENTORY MENU RENDERING MODE
-		// ==========================================
+		
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_top);
 		
 		// Draw Menu Title Header
 		draw_text_transformed(30, 20, "INVENTORY", 2, 2, 0);
-		draw_line_width(30, 55, 200, 55, 2);
+		draw_line_width(30, 55, 225, 55, 1);
 		
 		var inv_list = oPlayer.inv;
 		var start_y = 70;
@@ -49,14 +47,13 @@ if (!isDialogue) {
 		}
 		
 	} else {
-		// ==========================================
-		// STANDARD OVERWORLD HUD MODE
-		// ==========================================
+
 		draw_set_halign(fa_left);
-		draw_set_valign(fa_middle);
+		draw_set_valign(fa_top);
 
 		var room_name = room_get_name(room);
-		draw_text_transformed(12, 44, room_name, 3, 3, 0);
+		draw_text_transformed(30, 20, room_name, 2, 2, 0);
+		draw_line_width(30, 55, 225, 55, 1);
 
 		// Dynamic Hotkey Action Box Displays
 		var box_x = gui_width - 160 * 3;
@@ -64,7 +61,7 @@ if (!isDialogue) {
 		
 		// Z Equipment Box Window
 		draw_rectangle(box_x, box_y, box_x + 20 * 3, box_y + 30 * 3, true);
-		draw_text_transformed(gui_width - 154 * 3, 44, "Z", 3, 3, 0);
+		draw_text_transformed(gui_width - 154 * 3, 44, "Z", 2, 2, 0);
 		if (oPlayer.equipZ != noone) {
 			// Tiny indicator text underneath showing your equipped item's name shorthand
 			draw_text_transformed(gui_width - 160 * 3, 115, string_copy(oPlayer.equipZ.name, 1, 5), 1, 1, 0);
@@ -74,8 +71,8 @@ if (!isDialogue) {
 		var bbox_x = gui_width - 135 * 3;
 		var bbox_y = 26 * 3;
 		draw_rectangle(bbox_x, bbox_y, bbox_x + 30 * 3, bbox_y + 30 * 3, true);
-		draw_text_transformed(gui_width - 128 * 3, 47, "X", 3, 3, 0);
-		draw_text_transformed(gui_width - 133 * 3, 100, "Open \nInv.", 1, 1, 0);
+		draw_text_transformed(gui_width - 128 * 3, 47, "X", 2, 2, 0);
+		draw_text_transformed(gui_width - 133 * 3, 100, "Open \nInv.", 2, 2, 0);
 
 		// Render Player Health Resource Bar
 		if (instance_exists(oPlayer)) {
