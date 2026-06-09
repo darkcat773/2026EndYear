@@ -1,4 +1,5 @@
 isInventory = false;
+invSelect = 0; 
 
 // dialogue
 isDialogue = false; 

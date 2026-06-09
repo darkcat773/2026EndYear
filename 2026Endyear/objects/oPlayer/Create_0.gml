@@ -18,5 +18,9 @@ face = UP;
 //others
 
 //HP
-hp = 5;
-max_hp=5;
+hp = 3;
+max_hp=3;
+
+// inventory
+equippedZ = noone;
+inv = [noone, noone];
