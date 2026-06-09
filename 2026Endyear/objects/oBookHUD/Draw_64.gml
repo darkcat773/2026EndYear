@@ -1,19 +1,11 @@
 if(isNear){
-	drawInteract();
 	if (keyboard_check_pressed(vk_enter)){
 		isShowing = !isShowing;
 	}
 }
 
 
-drawInteract = function(){
-	var gui_width = display_get_gui_width();
-	draw_set_font(pixelfont);
-	draw_set_color(c_white);
-	draw_set_halign(fa_left);
-	draw_set_valign(fa_middle);
-	draw_text_transformed(12, 120, "[Enter]", 3, 3, 0);
-}
+
 
 
 
@@ -29,9 +21,18 @@ if(isShowing){
 	//draw_set_alpha(1.0); // Reset alpha back to solid
 	//draw_rectangle(120, 120, _gui_w - 120, _gui_h - 120, false);
 	draw_sprite_ext(sOpenMissingBook, 0,0, 180, scaleX,scaleY,0,c_white,1.0 );
-	correct = 0;
-	level1();
-	mouseHandling();
+
+	scoreHandling();
+	switch(currentLevel) {
+        case 1:
+            level1();
+            break;
+        case 2:
+            level2();
+            break;
+	}
+
+	
 	
 }
 
@@ -44,6 +45,27 @@ level1 = function(){
 	var constant =0;
 	var constant2 = 0;
 	answers = ["sun", "cloud", "rain", "pain", "sweet", "glass", "long", "tongue"];
+	answerOptionsText(answers);
+	checkAnswer(0, answers);
+}
+level2 = function(){
+	draw_sprite_ext(sSun, 0,102,290, 2.3,2.3,0,c_white, 1.0);
+	draw_set_font(pixelfont);
+	draw_set_colour(c_black);
+	draw_text(69,513, "You brighten up others'");
+	draw_text(100,580, "day like the ___");
+	var constant =0;
+	var constant2 = 0;
+	answers = ["ryan", "ryan", "ryan", "pain", "nanami", "nanami", "long", "tongue"];
+	answerOptionsText(answers);
+	checkAnswer(0, answers);
+}
+
+
+scoreHandling = function(){
+	draw_text_transformed(500, 120, $"{correct}/8", 3,3,0);
+}
+answerOptionsText = function(answers){
 	for (var i=0; i<array_length(answers);i++){
 		if (i<4){
 			constant = 87*i;
@@ -56,12 +78,9 @@ level1 = function(){
 		}
 		
 	}
-	
-}
-level2 = function(){
 }
 
-mouseHandling = function(){
+checkAnswer = function(index, answers) {
 	var mx = device_mouse_x_to_gui(0);
 	var my = device_mouse_y_to_gui(0);
 	var hovering = false;
@@ -77,14 +96,17 @@ mouseHandling = function(){
 			text_x = 570;
 			text_y = 320 + (87 * (i - 4));
 		}
+		//box to show where mouse is touching:
 		// draw_set_colour(c_aqua);
 		// draw_rectangle(text_x, text_y, text_x+text_w,text_y+text_h,true);
 		if (mx >= text_x && mx <= text_x + text_w && my >= text_y && my <= text_y + text_h) {
 			hovering = true;
         if (mouse_check_button_pressed(mb_left)) {
             show_debug_message("You clicked on: " + answers[i]);
-            if (answers[i] == "sun") {
-                
+            if (answers[i] == answerKey[index]) {
+				correct ++;
+				currentLevel++;
+				scoreHandling();
             }
         }
     }
@@ -95,4 +117,5 @@ mouseHandling = function(){
 	} else{
 		window_set_cursor(cr_default);
 	}
+	
 }
