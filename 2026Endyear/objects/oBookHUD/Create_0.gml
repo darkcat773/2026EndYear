@@ -5,5 +5,6 @@ pause_id = noone;
 correct = 0;
 var answers = ["sun", "cloud", "rain", "pain", "sweet", "glass", "long", "tongue"];
 
-answerKey = ["sun", "grey"]
+answerKey = ["sun", "important","grey", "smile","trust", "life", "cockroach", "friend"];
 currentLevel = 1;
+canDestroy = false;

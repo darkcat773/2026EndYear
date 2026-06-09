@@ -1,17 +1,27 @@
 if(isNear){
 	if (keyboard_check_pressed(vk_enter)){
+		if (canDestroy) {
+            instance_destroy(oBMissingBook);
+			instance_destroy();
+			isShowing =false;
+			if (instance_exists(pause_id)) {
+				instance_destroy(pause_id);
+				pause_id = noone; 
+			}
+			finished = true;
+            exit; 
+        } else{
 		isShowing = !isShowing;
+		}
 	}
 }
 
-
-
-
-
-
-
-
 if(isShowing){
+	if(correct==8){
+		canDestroy = true;
+		conclusion();
+	}
+	else{
 	var gui_w = display_get_gui_width();
 	var gui_h = display_get_gui_height();
 	
@@ -30,9 +40,26 @@ if(isShowing){
         case 2:
             level2();
             break;
+		case 3:
+            level3();
+            break;
+		case 4:
+            level4();
+            break;
+		case 5:
+            level5();
+            break;
+		case 6:
+            level6();
+            break;
+		case 7:
+            level7();
+            break;
+		case 8:
+            level8();
+            break;
 	}
-
-	
+	}
 	
 }
 
@@ -52,13 +79,85 @@ level2 = function(){
 	draw_sprite_ext(sSun, 0,102,290, 2.3,2.3,0,c_white, 1.0);
 	draw_set_font(pixelfont);
 	draw_set_colour(c_black);
-	draw_text(69,513, "You brighten up others'");
-	draw_text(100,580, "day like the ___");
+	draw_text(69,513, "You're very ____,'");
+	draw_text(100,580, "I hope I am too");
 	var constant =0;
 	var constant2 = 0;
-	answers = ["ryan", "ryan", "ryan", "pain", "nanami", "nanami", "long", "tongue"];
+	answers = ["youthful", "red", "cute", "severe", "important", "painful", "small", "mean"];
 	answerOptionsText(answers);
-	checkAnswer(0, answers);
+	checkAnswer(1, answers);
+}
+level3 = function(){
+	draw_sprite_ext(sSun, 0,102,290, 2.3,2.3,0,c_white, 1.0);
+	draw_set_font(pixelfont);
+	draw_set_colour(c_black);
+	draw_text(69,513, "in every ___-ish day,");
+	draw_text(55,580, "you always bring the fun");
+	var constant =0;
+	var constant2 = 0;
+	answers = ["weather", "fun", "take", "grey", "meaning", "sobbing", "table", "bread"];
+	answerOptionsText(answers);
+	checkAnswer(2, answers);
+}
+level4 = function(){
+	draw_sprite_ext(sSun, 0,102,290, 2.3,2.3,0,c_white, 1.0);
+	draw_set_font(pixelfont);
+	draw_set_colour(c_black);
+	draw_text(69,513, "Making people ___,");
+	draw_text(60,580, "whenever they feel blue");
+	var constant =0;
+	var constant2 = 0;
+	answers = ["take", "look", "body", "lose", "maneuver", "burden", "smile", "gain"];
+	answerOptionsText(answers);
+	checkAnswer(3, answers);
+}
+level5 = function(){
+	draw_sprite_ext(sSun, 0,102,290, 2.3,2.3,0,c_white, 1.0);
+	draw_set_font(pixelfont);
+	draw_set_colour(c_black);
+	draw_text(69,513, "____ me, I follow'");
+	draw_text(100,580, "a friendly approach");
+	var constant =0;
+	var constant2 = 0;
+	answers = ["youthful", "trust", "cute", "severe", "important", "painful", "small", "mean"];
+	answerOptionsText(answers);
+	checkAnswer(4, answers);
+}
+level6 = function(){
+	draw_sprite_ext(sSun, 0,102,290, 2.3,2.3,0,c_white, 1.0);
+	draw_set_font(pixelfont);
+	draw_set_colour(c_black);
+	draw_text(69,513, "Please don't put");
+	draw_text(100,580, "my ___ to end");
+	var constant =0;
+	var constant2 = 0;
+	answers = ["sadness", "information", "map", "family", "method", "bird", "problem", "life"];
+	answerOptionsText(answers);
+	checkAnswer(5, answers);
+}
+level7 = function(){
+	draw_sprite_ext(sSun, 0,102,290, 2.3,2.3,0,c_white, 1.0);
+	draw_set_font(pixelfont);
+	draw_set_colour(c_black);
+	draw_text(69,513, "Though I am a'");
+	draw_text(100,580, "_____");
+	var constant =0;
+	var constant2 = 0;
+	answers = ["ability", "economic", "teacher", "internet", "water", "area", "cockroach", "library"];
+	answerOptionsText(answers);
+	checkAnswer(6, answers);
+}
+level8 = function(){
+	draw_sprite_ext(sSun, 0,102,290, 2.3,2.3,0,c_white, 1.0);
+	draw_set_font(pixelfont);
+	draw_set_colour(c_black);
+	draw_text(69,513, "I'm still your'");
+	draw_text(100,580, "____");
+	var constant =0;
+	var constant2 = 0;
+	answers = ["quality", "oven", "friend", "activity", "investment", "video", "lava", "mean"];
+	answerOptionsText(answers);
+	checkAnswer(7, answers);
 }
 
 
@@ -107,7 +206,12 @@ checkAnswer = function(index, answers) {
 				correct ++;
 				currentLevel++;
 				scoreHandling();
-            }
+            } else{
+				correct = 0;
+				currentLevel = 1;
+				scoreHandling();
+				io_clear();
+			}
         }
     }
 	}
@@ -117,5 +221,18 @@ checkAnswer = function(index, answers) {
 	} else{
 		window_set_cursor(cr_default);
 	}
+	
+}
+
+conclusion = function(){
+	draw_sprite_ext(sPostItNote, 0, 73,150,28,25,0,c_white,true);
+	draw_set_colour(c_black);
+	draw_text_ext(150, 470, "you brighten up others' day\nlike the sun\nyou're very important,\ni hope i am too\nin every grey-ish day,\nyou always bring the fun\nMaking people smile,\nwhenever they feel blue\nTrust me, i follow a friendly approach\nPlease don't put my life to end\nThough I'm a cockroach\nI'm still your friend\n-Cockroach#67",30,330);
+	window_set_cursor(cr_default);
+	if(keyboard_check_pressed(vk_enter)){
+		instance_destroy(oBMissingBook);
+		finished = true;
+	}
+	
 	
 }
