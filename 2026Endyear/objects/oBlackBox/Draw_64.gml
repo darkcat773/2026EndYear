@@ -12,37 +12,55 @@ if (!isDialogue) {
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_middle);
 
-	var room_name = room_get_name(room);
-	draw_text_transformed(12, 44, room_name, 3, 3, 0);
+	
 
 	if (isInventory) {
-		var abox_x = gui_width - 160 * 3;
-		var abox_y = 26 * 3;
-		var abox_w = 70 * 3;
-		var abox_h = 30 * 3;
-		draw_rectangle(abox_x, abox_y, abox_x + abox_w, abox_y + abox_h, true);
-		draw_text_transformed(gui_width - 153 * 3, 47, "INV.", 2, 2, 0);
+		// We expand the height (abox_h) slightly to accommodate both slots nicely
+    var abox_x = gui_width - 160 * 3;
+    var abox_y = 26 * 3;
+    var abox_w = 70 * 3;
+    var abox_h = 30 * 3; 
+    draw_rectangle(abox_x, abox_y, abox_x + abox_w, abox_y + abox_h, true);
+    
+    // Header
+
+    draw_text_transformed(abox_x + 15, abox_y -20, "INV.", 2, 2, 0);
+    
+    // Draw both slots
+    for (var i = 0; i < 2; i++) {
+        var item_name = (oPlayer.inv[i] == noone) ? "Empty" : oPlayer.inv[i];
+        var text_y_pos = abox_y + 32 + (i * 32);
+        
+        if (invSelect == i) {
+            // Draw visual cursor indicator next to selected choice
+			if ((current_time div 400) % 2 == 0) {
+			draw_text_transformed(abox_x + 15, text_y_pos, "> " + item_name, 1.5, 1.5, 0);
+		}
+        } else {
+            draw_text_transformed(abox_x + 35, text_y_pos, item_name, 1.5, 1.5, 0);
+        }
+    }
 	} else {
 		var abox_x = gui_width - 160 * 3;
 		var abox_y = 26 * 3;
 		var abox_w = 20 * 3;
 		var abox_h = 30 * 3;
 		draw_rectangle(abox_x, abox_y, abox_x + abox_w, abox_y + abox_h, true);
-		draw_text_transformed(gui_width - 154 * 3, 44, "Z", 3, 3, 0);
+		draw_text_transformed(gui_width - 154 * 3, 58, "Z", 2, 2, 0);
 
 		var bbox_x = gui_width - 135 * 3;
 		var bbox_y = 26 * 3;
 		var bbox_w = 30 * 3;
 		var bbox_h = 30 * 3;
 		draw_rectangle(bbox_x, bbox_y, bbox_x + bbox_w, bbox_y + bbox_h, true);
-		draw_text_transformed(gui_width - 128 * 3, 47, "X", 3, 3, 0);
-		draw_text_transformed(gui_width - 133 * 3, 100, "Open \nInv.", 1, 1, 0);
+		draw_text_transformed(gui_width - 124 * 3, 58, "X", 2, 2, 0);
+		draw_text_transformed(gui_width - 133 * 3, 120, "Inv.", 2, 2, 0);
 	}
 
 	if (instance_exists(oPlayer)) {
 		var player_hp = oPlayer.hp;
 		var player_maxhp = oPlayer.max_hp;
-		var start_x = gui_width - 320;
+		var start_x = gui_width - 200;
 		var start_y = 12;
 		var spacing = 60;
 		
@@ -52,7 +70,7 @@ if (!isDialogue) {
 		}
 		
 		var room_name = room_get_name(room);
-		draw_text_transformed(12,44,room_name,3,3,0);
+		draw_text_transformed(24,40,room_name,2,2,0);
 	}
 	
 } else {
@@ -84,7 +102,7 @@ drawInteract = function(){
 	draw_set_color(c_white);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_middle);
-	draw_text_transformed(12, 120, "[Enter]", 3, 3, 0);
+	draw_text_transformed(20, 120, "[Enter]", 2, 2, 0);
 }
 
 if(instance_exists(oBookHUD) and instance_exists(oBookShelfInteract)){

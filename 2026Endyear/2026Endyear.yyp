@@ -79,6 +79,7 @@
     {"id":{"name":"oGreyBorder","path":"objects/oGreyBorder/oGreyBorder.yy",},},
     {"id":{"name":"oGreyWall","path":"objects/oGreyWall/oGreyWall.yy",},},
     {"id":{"name":"oHChair","path":"objects/oHChair/oHChair.yy",},},
+    {"id":{"name":"oItem","path":"objects/oItem/oItem.yy",},},
     {"id":{"name":"oKingDesk","path":"objects/oKingDesk/oKingDesk.yy",},},
     {"id":{"name":"oKingLock","path":"objects/oKingLock/oKingLock.yy",},},
     {"id":{"name":"oOpenMissingBook","path":"objects/oOpenMissingBook/oOpenMissingBook.yy",},},
