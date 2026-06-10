@@ -88,13 +88,16 @@ if (!isDialogue) {
 	// Draw the typewriter text
 	draw_text_ext_transformed(text_x, text_y, currentText, line_sep, max_width, 2, 2, 0);
 	
-	if (textProgress >= string_length(dialogueText)) {
-		//blinker
+	// Find this check inside your existing DRAW GUI code:
+	var target_text = dialogueText[dialoguePage];
+
+	if (textProgress >= string_length(target_text)) {
+		// blinker
 		if ((current_time div 400) % 2 == 0) {
 			draw_text_transformed(gui_width - 40, 130, "v", 2, 2, 0);
 		}
 	}
-}
+	}
 
 drawInteract = function(){
 	var gui_width = display_get_gui_width();

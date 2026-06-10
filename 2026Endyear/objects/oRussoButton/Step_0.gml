@@ -8,7 +8,10 @@ if(!isPressed){
 		global.redButtonPressed = true;
 		with (oBlackBox) {
 			isDialogue = true;
-		    dialogueText = "...Sounds like a door just opened up.";
+		    dialogueText = [
+			"Seems like a door just opened up...",
+			"Let's go check it out!"
+			];
 		    textProgress = 0; 
 		    currentText = "";
 		}
