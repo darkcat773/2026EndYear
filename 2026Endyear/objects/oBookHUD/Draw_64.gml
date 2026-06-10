@@ -203,6 +203,9 @@ if (isShowing) {
     var scaleY = (240 * 3 - 180) / sprite_get_height(sOpenMissingBook);
     
     draw_sprite_ext(sOpenMissingBook, 0, 0, 180, scaleX, scaleY, 0, c_white, 1.0);
+	draw_text_transformed_colour(400, 252, "Click a word!", 2, 2, 0, c_black, c_black, c_black, c_black, 1)
+	
+	
 
     // 2. Handle levels and scoring
     scoreHandling();

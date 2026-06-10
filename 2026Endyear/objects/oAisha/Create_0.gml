@@ -1,2 +1,2 @@
 gavePostIt = false;
-didshetalk = false;
+talked = false;

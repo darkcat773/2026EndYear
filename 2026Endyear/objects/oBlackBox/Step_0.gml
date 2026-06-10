@@ -37,22 +37,33 @@ if (!isDialogue) {
 				var selected_item = oPlayer.inv[invSelect];
 				var item_was_used = false;
 				
-				// --- ITEM USAGE LOGIC HOOK ---
-				if (selected_item.name == "Rusty Key") {
-					if (instance_exists(oBHallwayDoor) && distance_to_object(oBHallwayDoor) < 40) {
-						oBHallwayDoor.locked = false;
-						item_was_used = true; 
-						
-						// UPDATED: Now passing multi-page text as an array
+				if (selected_item == "Post-it") {
+				    if (instance_exists(oAisha)) {
+				        var targetAisha = instance_nearest(oPlayer.x, oPlayer.y, oAisha);
+				        if (point_distance(oPlayer.x, oPlayer.y, targetAisha.x, targetAisha.y) < 80) {
+							if (!targetAisha.talked) {
+				                // Trigger Aisha's custom script state
+				                targetAisha.gavePostIt = true;
+                
+				                // Close the inventory view so the dialogue text box can take over
+				                isInventory = false; 
+                
+				                // 3. Remove the Post-it from the player's inventory slots so it gets consumed
+				                for (var i = 0; i < 2; i++) {
+				                    if (oPlayer.inv[i] == "Post-it") {
+				                        oPlayer.inv[i] = noone;
+				                        break;
+				                    }
+				                }
+				            }
+				        }
+				    } else {
 						isDialogue = true;
-						dialogueText = ["Used the Rusty Key!", "The heavy iron door unlocked!"];
-						dialoguePage = 0;
-					} else {
-						isDialogue = true;
-						dialogueText = ["Can't use that here.", "There isn't a lock in sight..."];
+						dialogueText = ["You pull out the Post-it...", "But there's nobody to read its contents."];
 						dialoguePage = 0;
 					}
 				}
+				
 				
 				if (item_was_used) {
 					array_delete(oPlayer.inv, invSelect, 1);

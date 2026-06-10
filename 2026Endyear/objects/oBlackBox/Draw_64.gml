@@ -94,7 +94,7 @@ if (!isDialogue) {
 	if (textProgress >= string_length(target_text)) {
 		// blinker
 		if ((current_time div 400) % 2 == 0) {
-			draw_text_transformed(gui_width - 40, 130, "v", 2, 2, 0);
+			draw_text_transformed(gui_width-180, 130, "[Enter]", 2, 2, 0);
 		}
 	}
 	}
