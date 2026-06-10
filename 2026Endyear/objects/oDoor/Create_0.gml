@@ -4,3 +4,7 @@ target_room = 0;
 target_face = 0;
 locked = false;
 conditional = true;
+dialogueText = "This room is inaccessable.";
+isDialogue = false;
+hasTriggered = false;
+hasDialogue = true;

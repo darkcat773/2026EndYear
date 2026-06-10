@@ -1,7 +1,7 @@
 //general movement
 depth = -bbox_bottom
 movDirection = 0;
-movSpeed = 1.15;
+movSpeed = 3;
 xSpeed = 0;
 ySpeed = 0;
 
