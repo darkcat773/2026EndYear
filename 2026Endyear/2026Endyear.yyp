@@ -142,6 +142,7 @@
     {"id":{"name":"sBWall","path":"sprites/sBWall/sBWall.yy",},},
     {"id":{"name":"sClosetClosed","path":"sprites/sClosetClosed/sClosetClosed.yy",},},
     {"id":{"name":"sClosetOpen","path":"sprites/sClosetOpen/sClosetOpen.yy",},},
+    {"id":{"name":"sCockroach","path":"sprites/sCockroach/sCockroach.yy",},},
     {"id":{"name":"sCorrect","path":"sprites/sCorrect/sCorrect.yy",},},
     {"id":{"name":"sCorrectOrder","path":"sprites/sCorrectOrder/sCorrectOrder.yy",},},
     {"id":{"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},},

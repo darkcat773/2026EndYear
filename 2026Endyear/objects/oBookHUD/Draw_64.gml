@@ -82,7 +82,7 @@ level1 = function() {
 }
 
 level2 = function() {
-    draw_sprite_ext(sSun, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
+    draw_sprite_ext(sImportant, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
     draw_set_font(pixelfont);
     draw_set_colour(c_black);
     draw_text(69, 513, "You're very ____,'");
@@ -95,7 +95,7 @@ level2 = function() {
 }
 
 level3 = function() {
-    draw_sprite_ext(sSun, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
+    draw_sprite_ext(sGrey, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
     draw_set_font(pixelfont);
     draw_set_colour(c_black);
     draw_text(69, 513, "in every ___-ish day,");
@@ -108,7 +108,7 @@ level3 = function() {
 }
 
 level4 = function() {
-    draw_sprite_ext(sSun, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
+    draw_sprite_ext(sSmile, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
     draw_set_font(pixelfont);
     draw_set_colour(c_black);
     draw_text(69, 513, "Making people ___,");
@@ -121,7 +121,7 @@ level4 = function() {
 }
 
 level5 = function() {
-    draw_sprite_ext(sSun, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
+    draw_sprite_ext(sTrust, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
     draw_set_font(pixelfont);
     draw_set_colour(c_black);
     draw_text(69, 513, "____ me, I follow'");
@@ -134,7 +134,7 @@ level5 = function() {
 }
 
 level6 = function() {
-    draw_sprite_ext(sSun, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
+    draw_sprite_ext(sLife, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
     draw_set_font(pixelfont);
     draw_set_colour(c_black);
     draw_text(69, 513, "Please don't put");
@@ -147,7 +147,7 @@ level6 = function() {
 }
 
 level7 = function() {
-    draw_sprite_ext(sSun, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
+    draw_sprite_ext(sCockroach, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
     draw_set_font(pixelfont);
     draw_set_colour(c_black);
     draw_text(69, 513, "Though I am a'");
@@ -160,7 +160,7 @@ level7 = function() {
 }
 
 level8 = function() {
-    draw_sprite_ext(sSun, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
+    draw_sprite_ext(sFriend, 0, 102, 290, 2.3, 2.3, 0, c_white, 1.0);
     draw_set_font(pixelfont);
     draw_set_colour(c_black);
     draw_text(69, 513, "I'm still your'");
