@@ -64,5 +64,12 @@ checkAnswer = function(){
 
 
 dropKey = function(){
+	with (oBlackBox) {
+		    isDialogue = true;
+		    dialogueText = "You hear a faint click. Perhaps another door has opened?"
+		    textProgress = 0;
+		    currentText = "";
+	}
+	global.bookshelfSolved=true;
 	
 }

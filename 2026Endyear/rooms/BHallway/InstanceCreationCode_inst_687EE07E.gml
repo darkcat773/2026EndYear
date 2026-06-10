@@ -5,4 +5,4 @@ target_face = UP;
 locked = true;
 conditional = !global.redButtonPressed;
 depth = -10000
-dialogueText = "This room needs a button to be unlocked";
+dialogueText = "It seems like this door can be opened with the press of a button...";

@@ -105,8 +105,16 @@ drawInteract = function(){
 	draw_text_transformed(20, 120, "[Enter]", 2, 2, 0);
 }
 
-if(instance_exists(oBookHUD) and instance_exists(oBookShelfInteract)){
-	if(oBookHUD.isNear or oBookShelfInteract.isNear){
+if(instance_exists(oBookHUD)){
+	if(oBookHUD.isNear){
 	drawInteract();
 }
 }
+if instance_exists(oBookShelfInteract) {
+	if(oBookShelfInteract.isNear){
+	drawInteract();
+}
+}
+
+
+

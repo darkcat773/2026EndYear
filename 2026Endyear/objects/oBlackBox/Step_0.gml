@@ -20,19 +20,20 @@ if (!isDialogue) {
             if (selectedItem != noone) {
                 var itemUsedSuccessfully = false;
                 
-                // --- ITEM USAGE & PROXIMITY TRACKING SYSTEM ---
-                // Find the closest door to the player
-                var nearDoor = instance_nearest(oPlayer.x, oPlayer.y, oDoor);
-                var distanceToDoor = 9999;
-                if (nearDoor != noone) {
-                    distanceToDoor = point_distance(oPlayer.x, oPlayer.y, nearDoor.x, nearDoor.y);
+                // --- ITEM USAGE & PROXIMITY TRACKING SYSTEM ---    
+
+				//check for aisha... i know there are probably better solutions but idc anymore
+                var aisha = instance_nearest(oPlayer.x, oPlayer.y, oAisha);
+                var distanceToAisha = 9999;
+                if (aisha != noone) {
+                    distanceToAisha = point_distance(oPlayer.x, oPlayer.y, aisha.x, aisha.y);
                 }
                 
                 // Check conditions based on the item string name
-                if (selectedItem == "Key") {
+                if (selectedItem == "Post-it") {
                     // If near a locked door (within 40 pixels range)
-                    if (nearDoor != noone && distanceToDoor < 40 && nearDoor.locked) {
-                        nearDoor.locked = false; // Unlock it!
+                    if (aisha != noone && distanceToAisha < 40 && nearDoor.locked) {
+                        aisha.gavePostIt = true;
                         itemUsedSuccessfully = true; 
                     }
                 }

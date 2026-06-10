@@ -54,7 +54,6 @@
     {"name":"inst_38C4EA2D","path":"rooms/BHallway/BHallway.yy",},
     {"name":"inst_588849A6","path":"rooms/BHallway/BHallway.yy",},
     {"name":"inst_32C29EA6","path":"rooms/BHallway/BHallway.yy",},
-    {"name":"inst_6E1A2CB2","path":"rooms/BHallway/BHallway.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -108,7 +107,6 @@
         {"$GMRInstance":"v4","%Name":"inst_38C4EA2D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_38C4EA2D","objectId":{"name":"oBookHUD","path":"objects/oBookHUD/oBookHUD.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":528.0,"y":328.0,},
         {"$GMRInstance":"v4","%Name":"inst_588849A6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_588849A6","objectId":{"name":"oItem","path":"objects/oItem/oItem.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":320.0,"y":248.0,},
         {"$GMRInstance":"v4","%Name":"inst_32C29EA6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_32C29EA6","objectId":{"name":"soundManager","path":"objects/soundManager/soundManager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":712.0,"y":344.0,},
-        {"$GMRInstance":"v4","%Name":"inst_6E1A2CB2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6E1A2CB2","objectId":{"name":"oBMissingBook","path":"objects/oBMissingBook/oBMissingBook.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":400.0,"y":216.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
