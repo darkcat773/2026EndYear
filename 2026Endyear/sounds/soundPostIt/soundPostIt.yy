@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"soundPostIt",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.68,
+  "exportDir":"",
+  "name":"soundPostIt",
+  "parent":{
+    "name":"sound",
+    "path":"folders/sound.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"soundPostIt.mp3",
+  "volume":1.0,
+}

@@ -5,7 +5,9 @@ if (isShowing){
 	bookSelection();
 	if(submitted){
 		checkAnswer();
+		submitted=false;
 	}
+
 	
 }
 if(not isShowing){
@@ -21,18 +23,46 @@ bookSelection = function(){
 		show_debug_message("Z is pressed");
 		if(not array_contains(selectedBooks,sBooks[book_index])){
 			array_push(selectedBooks, sBooks[book_index]);
-			show_debug_message($"{sBooks[book_index]} has been added");
+			show_debug_message(string(sBooks[book_index]) + " has been addeduauaua");
+			var length = array_length(selectedBooks);
+			var length2 = array_length(sBooks);
+			show_debug_message(string(length) + " is selectedBooks, "+ string(length2)+ " is sBooks");
 		}	
+		
 		if(array_length(selectedBooks) ==6){
 			submitted = true;
+			show_debug_message("List has been submitted")
 		}
 	}
 }
 
 checkAnswer = function(){
+	isCorrect= true;
+	var length = array_length(selectedBooks);
+	var length2 = array_length(sBooks);
+	show_debug_message($"{length} is selectedBooks, {length2} is sBooks");
 	for(var i=0; i<array_length(selectedBooks);i++){
-		if(not selectedBooks[i] == answerKey[i]){
-			show_debug_message("Wrong");
+		if(string(selectedBooks[i]) != string(answerKey[i])){
+			isCorrect = false;
+			break;
 		}
 	}
+	
+	if(isCorrect){
+		show_debug_message("Correct");
+		drawCorrectBool = true;
+		soundManager.key = true;
+		dropKey();
+	} else{
+		wrongTimer = 60;
+		show_debug_message("Wrong!!");
+		selectedBooks = [];
+	}
+}if (wrongTimer > 0) {
+    wrongTimer--;
+}
+
+
+dropKey = function(){
+	
 }

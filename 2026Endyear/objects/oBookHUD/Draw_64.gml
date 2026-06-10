@@ -65,10 +65,7 @@ conclusion = function() {
     draw_text_ext(150, 470, "you brighten up others' day\nlike the sun\nyou're very important,\ni hope i am too\nin every grey-ish day,\nyou always bring the fun\nMaking people smile,\nwhenever they feel blue\nTrust me, i follow a friendly approach\nPlease don't put my life to end\nThough I'm a cockroach\nI'm still your friend\n-Cockroach#67", 30, 330);
     window_set_cursor(cr_default);
     
-    if (keyboard_check_pressed(vk_enter)) {
-        instance_destroy(oBMissingBook);
-        finished = true;
-    }
+
 }
 
 level1 = function() {

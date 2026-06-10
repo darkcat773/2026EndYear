@@ -8,6 +8,13 @@ if(isNear){
 		bookSortOpen();
 		drawZoom();
 		
+		if (wrongTimer > 0) {
+			drawWrong();
+		}
+		if(drawCorrectBool){
+			drawCorrect();
+		}
+	
 	}
 }
 
@@ -53,4 +60,20 @@ drawZoom = function(){
 	for(var i =0; i<array_length(selectedBooks); i++){
 		draw_sprite_ext(selectedBooks[i],0,(base_x+constant*i),665,3,3,0,c_white,1.0);
 	}
+}
+
+drawCorrect = function(){
+	draw_set_colour(c_green);
+	draw_rectangle(150,400,600,600,false);
+	draw_set_colour(c_white);
+	draw_text_transformed(270, 500, "Correct!",2,2,0);
+	
+}
+
+drawWrong = function(){
+	show_debug_message("Draw rectangle");
+	draw_set_colour(c_red);
+	draw_rectangle(150,400,600,600,false);
+	draw_set_colour(c_white);
+	draw_text_transformed(320, 500, "Wrong",2,2,0);
 }

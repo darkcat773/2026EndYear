@@ -12,4 +12,13 @@ if(not isShowing){
 	correct =0;
 }
 
-
+if(canDestroy){
+	if (keyboard_check_pressed(vk_enter)) {
+		if (instance_exists(soundManager)) {
+                soundManager.ripping = true;
+        }
+		
+        instance_destroy(oBMissingBook);
+        finished = true;
+    }
+}
