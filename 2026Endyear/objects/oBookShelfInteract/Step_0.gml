@@ -50,7 +50,7 @@ checkAnswer = function(){
 	
 	if(isCorrect){
 		show_debug_message("Correct");
-		//drawCorrectBool = true;
+		drawCorrectBool = true;
 		soundManager.key = true;
 		dropKey();
 	} else{
