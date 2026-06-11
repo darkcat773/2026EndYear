@@ -223,6 +223,7 @@ if (isShowing) {
     // 3. Check if player completed all 8 levels
     if (correct == 8) {
         if (!canDestroy) {
+			global.bookPuzzleComplete = true;
             canDestroy = true;
             var itemAdded = item_add_remote("Post-it", "X");
         }

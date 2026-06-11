@@ -1,2 +1,3 @@
 gavePostIt = false;
-talked = false;
+sprayTriggered = false;
+gasSpawned = false;

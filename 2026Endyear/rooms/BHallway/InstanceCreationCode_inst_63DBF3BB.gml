@@ -1,0 +1,11 @@
+targetX = 363
+targetY = 583
+target_room = BHessami;
+target_face = UP;
+locked = false;
+msg = ["This door needs a very special key."];
+conditional = true;
+isDialogue = false;
+hasTriggered = false;
+hasDialogue = true;
+isStairwellDoor = true;

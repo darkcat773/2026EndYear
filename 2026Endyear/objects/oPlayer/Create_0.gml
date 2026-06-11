@@ -1,7 +1,7 @@
 //general movement
 depth = -bbox_bottom
 movDirection = 0;
-movSpeed = 3;
+movSpeed = 4;
 xSpeed = 0;
 ySpeed = 0;
 
@@ -20,6 +20,8 @@ face = UP;
 //HP
 hp = 3;
 max_hp=3;
+damageTimer = 0;
+isDead = false;
 
 // inventory
 equippedZ = noone;

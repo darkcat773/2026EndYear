@@ -41,7 +41,7 @@ if (!isDialogue) {
 				    if (instance_exists(oAisha)) {
 				        var targetAisha = instance_nearest(oPlayer.x, oPlayer.y, oAisha);
 				        if (point_distance(oPlayer.x, oPlayer.y, targetAisha.x, targetAisha.y) < 80) {
-							if (!targetAisha.talked) {
+							if (!global.talkedToAisha) {
 				                // Trigger Aisha's custom script state
 				                targetAisha.gavePostIt = true;
                 
@@ -62,6 +62,61 @@ if (!isDialogue) {
 						dialogueText = ["You pull out the Post-it...", "But there's nobody to read its contents."];
 						dialoguePage = 0;
 					}
+				}
+				if (selected_item == "Stair Key") {
+				    if (instance_exists(oBStaircaseDoor)) {
+				        // Find whichever staircase door the player is standing next to
+				        var targetDoor = instance_nearest(oPlayer.x, oPlayer.y, oBStaircaseDoor);
+        
+				        // 1. Check if the player is actually close enough to interact with it
+				        if (point_distance(oPlayer.x, oPlayer.y, targetDoor.x, targetDoor.y) < 96) {
+            
+				            // 2. Check if this is the tagged door instance from the Room Editor
+				            if (targetDoor.isStairwellDoor == true) {
+                
+				                // Set up the dialogue to read
+				                isDialogue = true;
+				                dialogueText = ["You try the Stair Key on the door...", "It works! Twisting the key, the door unlocks.", "Yippee!"];
+				                dialoguePage = 0;
+                
+				                // Queue up the room transition to happen AFTER the dialogue boxes finish
+				                roomTargetAfterDialogue = BStaircase; // <-- Change 'Stairwell' to your exact Room asset name
+                
+				                // 3. Consume the Stair Key from the 2-slot inventory
+				                for (var i = 0; i < 2; i++) {
+				                    if (oPlayer.inv[i] == "Stair Key") {
+				                        oPlayer.inv[i] = noone;
+				                        break;
+				                    }
+				                }
+								
+								if !instance_exists(oWarp) {
+									var instance = instance_create_depth(0, 0, -12000, oWarp)
+									instance.targetX = 80
+									instance.targetY = 184
+									instance.target_room = BStaircase
+									instance.target_face = UP
+								}
+                
+				            } else {
+				                // Player tried to use the key on the WRONG staircase door instance
+				                isDialogue = true;
+				                dialogueText = ["You try the Stair Key on the door...", "It does not work. You might wanna try the other staircase door."];
+				                dialoguePage = 0;
+				            }
+				        } else {
+				            // Player used the key too far away from any door
+				            isDialogue = true;
+				            dialogueText = ["You pull out the stair key, despite there being nothing to unlock.", "...you put the key back away slowly."];
+				            dialoguePage = 0;
+				        }
+				    } else {
+				        isDialogue = true;
+				        dialogueText = ["You pull out the key, despite there not being any doors in sight.", "Nice job."];
+				        dialoguePage = 0;
+				    }
+    
+				    isInventory = false; // Close the inventory view overlay
 				}
 				
 				
