@@ -1,7 +1,7 @@
 //general movement
 depth = -bbox_bottom
 movDirection = 0;
-movSpeed = 4;
+movSpeed = 1.2;
 xSpeed = 0;
 ySpeed = 0;
 
@@ -25,4 +25,4 @@ isDead = false;
 
 // inventory
 equippedZ = noone;
-inv = [noone, noone];
+inv = [noone, "Stair Key"];

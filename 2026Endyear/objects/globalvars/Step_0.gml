@@ -1,4 +1,4 @@
-if keyboard_check_pressed(vk_enter) {
+if keyboard_check_pressed(vk_enter) && !enter {
 	instance_create_depth(1000, 0, -12000, oPlayer)
 	if !instance_exists(oWarp) {
 		var instance = instance_create_depth(0, 0, -12000, oWarp)

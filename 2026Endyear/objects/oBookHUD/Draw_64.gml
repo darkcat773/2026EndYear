@@ -62,6 +62,8 @@ checkAnswer = function(index, answers) {
 conclusion = function() {
     draw_sprite_ext(sPostItNote, 0, 73, 150, 28, 25, 0, c_white, true);
     draw_set_colour(c_black);
+	draw_set_halign(fa_top);
+	draw_set_valign(fa_middle);
     draw_text_ext(150, 470, "you brighten up others' day\nlike the sun\nyou're very important,\ni hope i am too\nin every grey-ish day,\nyou always bring the fun\nMaking people smile,\nwhenever they feel blue\nTrust me, i follow a friendly approach\nPlease don't put my life to end\nThough I'm a cockroach\nI'm still your friend\n-Cockroach#67", 30, 330);
     window_set_cursor(cr_default);
     
@@ -201,9 +203,13 @@ if (isShowing) {
     var gui_h = display_get_gui_height();
     var scaleX = 256 * 3 / sprite_get_width(sOpenMissingBook);
     var scaleY = (240 * 3 - 180) / sprite_get_height(sOpenMissingBook);
+	draw_set_font(pixelfont);
+	draw_set_color(c_white);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
     
     draw_sprite_ext(sOpenMissingBook, 0, 0, 180, scaleX, scaleY, 0, c_white, 1.0);
-	draw_text_transformed_colour(400, 252, "Click a word!", 2, 2, 0, c_black, c_black, c_black, c_black, 1)
+	draw_text_transformed_colour(400, 240, "Click a word!", 2, 2, 0, c_black, c_black, c_black, c_black, 1)
 	
 	
 

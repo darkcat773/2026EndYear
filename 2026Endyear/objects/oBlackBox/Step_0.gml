@@ -93,7 +93,7 @@ if (!isDialogue) {
 								if !instance_exists(oWarp) {
 									var instance = instance_create_depth(0, 0, -12000, oWarp)
 									instance.targetX = 80
-									instance.targetY = 184
+									instance.targetY = 258
 									instance.target_room = BStaircase
 									instance.target_face = UP
 								}
